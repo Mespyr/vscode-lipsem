@@ -1,0 +1,41 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "scopeName": "source.lipsem",
+    "patterns": [
+        { "include": "#keywords" }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.lipsem",
+                    "match": "\\b(endl|pop|lb)\\b"
+                },
+				{
+					"name": "keyword.operator.lipsem",
+					"match": "\\b(add|sub|dupe)\\b"
+				},
+				{
+					"name": "entity.name.function.lipsem",
+					"match": "\\b(flip|bk|jmp|tv|pchar|print)\\b"
+				},
+				{
+					"name": "constant.numeric.lipsem",
+					"match": "\\b(\\d+)\\b"
+				},
+                {
+                    "name": "support.function.lipsem",
+                    "match": "\\.(\\w+)"
+                },
+                {
+                    "name": "string.quoted.double",
+                    "match": "`(\\w+)"
+                },
+                {
+                    "name": "constant.character",
+                    "match": "(:|-|~)(\\w+)"
+                }
+            ]
+        }
+    }
+}
